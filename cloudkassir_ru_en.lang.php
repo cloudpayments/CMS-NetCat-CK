@@ -1,0 +1,5 @@
+<?php
+
+/* CloudKassir */
+define("NETCAT_MODULE_PAYMENT_REGISTER_CLOUDKASSIR_PUBLIC_ID", "Public site ID");
+define("NETCAT_MODULE_PAYMENT_REGISTER_CLOUDKASSIR_SECRET_KEY", "Secret key");
