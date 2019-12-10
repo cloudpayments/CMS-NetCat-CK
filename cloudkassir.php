@@ -11,9 +11,11 @@ class nc_payment_register_provider_cloudkassir extends nc_payment_register_provi
         ''   => '',
         0    => '0',
         10   => '10',
-        18   => '18',
+        20   => '20',
+        110   => '110',
+        120   => '120'
     );
-    static protected $cloudkassir_default_vat = '18';
+    static protected $cloudkassir_default_vat = '20';
 
     /**
      * Обработка нового чека (отправка запроса на создание чека в ККМ)
@@ -39,6 +41,7 @@ class nc_payment_register_provider_cloudkassir extends nc_payment_register_provi
             'CustomerReceipt' => array(
                 'Items'          => array(),
                 'taxationSystem' => $tax_variant,
+                'calculationPlace'=>'www.'.$_SERVER['SERVER_NAME'],
                 'email'          => $invoice->get('customer_email'),
                 'phone'          => $invoice->get('customer_phone')
             ),
